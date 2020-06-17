@@ -1,0 +1,43 @@
+@mixin flexCenter($altura) {
+    height: $altura;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cont-index{
+    @include flexCenter(100vh);
+    .index-cont-mensajeseguridad{
+        color: white;
+    }
+    .index-cont-titulares{
+        margin-top: 50px;
+        margin-bottom: 25px;
+        h1{
+            font-size: 40px;
+            margin-bottom: 25px;
+        }
+        p{
+            font-size: 30px;
+        }
+    }
+    .index-btn-sesion{
+        a{
+            font-size: 20px;
+            background-color: #27AE60;
+            border-radius: 6px;
+            padding: 6px;
+            text-decoration: none;
+            color: white;
+            transition: 600ms;
+        }
+        a:hover{
+            transform: translateY(25px);
+            background-color: #196F3D;
+            box-shadow:  0px 30px 5px -15px rgba(0,0,0,0.3);
+        }
+    }
+    
+}

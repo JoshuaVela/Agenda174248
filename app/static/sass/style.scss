@@ -1,0 +1,14 @@
+@import "./index";
+@import "./login";
+@import "./agenda";
+@import "./registrar";
+
+body{
+    background-color: #5499C7;
+}
+.nav{
+    h4{
+        margin-left: 60px;
+        color: white;
+    }
+}

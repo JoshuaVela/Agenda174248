@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block contentlogin %}
+    <section class="cont-login">
+        <div class="login-cont-menssage">
+            <!-- Mostrar mensaje  -->
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <h4>{{message}}</h4>
+                    {% endfor  %}
+                {% endif %}
+            {% endwith %}
+        </div>
+        <div class="login-cont-form">
+            <h1>Iniciar Sesion</h1>
+
+            <form action="" method="post">
+                {{ form.hidden_tag() }}
+                <p>
+                    {{ form.username.label }}
+                    {{ form.username(size=32) }}
+                </p>
+                <p>
+                    {{ form.password.label }}
+                    {{ form.password(size=32) }}
+                </p>
+                <p>
+                    {{ form.remember_me() }}
+                    {{ form.remember_me.label }}
+                </p>
+                <p>
+                    {{ form.submit() }}
+                </p>
+            </form>
+            <a href="{{ url_for('signup') }}">Registrarse</a>
+            <a href="{{ url_for('index') }}">regresar</a>
+        </div>
+    </section>
+{% endblock %}

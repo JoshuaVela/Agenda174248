@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block contentindex %}
+    <section class="cont-index">
+        <div class="index-cont-mensajeseguridad">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <h4>{{message}}</h4>
+                    {% endfor  %}
+                {% endif %}
+            {% endwith %}
+        </div>
+        <div class="index-cont-titulares">
+            <h1>Bienvenidos a la agenda virtual!!</h1>
+            <p>Para poder ver la agenda inicia sesion.</p>
+        </div>
+        <div class="index-btn-sesion">
+            <a href="/login">Iniciar Sesion</a>
+        </div>
+    </section>
+{% endblock %}

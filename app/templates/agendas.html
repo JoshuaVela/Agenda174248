@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block contentagendas %}
+    <section class="cont-agendas">
+        <div class="agendas-cont-table">
+            <table class="table table-hover table-dark">
+                <thead class="">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Telefonos</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Notas</th>
+                    <th scope="col">opciones</th>
+                  </tr>
+                </thead>
+                {% for contac in contacs %}
+                <tbody>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>{{contac.first_name}}</td>
+                    <td>{{contac.last_name}}</td>
+                    <td>{{contac.phone}}</td>
+                    <td>{{contac.email}}</td>
+                    <td>{{contac.note}}</td>
+                    <td>
+                      <form method="post" action="{{ url_for('edit_agenda', id=contac.id )}}">
+                        <input type="submit" value="Editar">
+                      </form>
+
+                        <form method="post" action="{{ url_for('delete_agenda', id=contac.id )}}">
+                          <input type="submit" value="Eliminar">
+                        </form>
+                    </td>
+                  </tr>
+                </tbody>
+                {% endfor %}
+              </table>
+              
+        </div>
+
+    </section>
+{% endblock %}

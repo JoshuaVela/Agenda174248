@@ -1,0 +1,22 @@
+.cont-login{
+    @include flexCenter(100vh);
+    .login-cont-form{
+        border-radius: 15px;
+        margin-top: 50px;
+        padding: 35px;
+        -webkit-box-shadow: 6px 18px 34px 18px rgba(0,0,0,0.34);
+        -moz-box-shadow: 6px 18px 34px 18px rgba(0,0,0,0.34);
+        box-shadow: 6px 18px 34px 18px rgba(0,0,0,0.34);
+    }
+    a{
+        border: black solid 1px;
+        background-color: whitesmoke;
+        padding: 5px;
+        color: black;
+        text-decoration: none;
+    }
+    a:hover{
+        background-color: #B3B6B7;
+    }
+}
+

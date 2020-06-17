@@ -1,0 +1,12 @@
+.cont-agendas{
+    @include flexCenter(60vh);
+    table{
+        -webkit-box-shadow: 6px 18px 34px 18px rgba(0,0,0,0.34);
+        -moz-box-shadow: 6px 18px 34px 18px rgba(0,0,0,0.34);
+        box-shadow: 6px 18px 34px 18px rgba(0,0,0,0.34);
+        th{
+            padding: 15px;
+            font-size: 30px;
+        }
+    }
+}
